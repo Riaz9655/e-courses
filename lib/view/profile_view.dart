@@ -1,7 +1,9 @@
+import 'package:e_course/view/login_view.dart';
 import 'package:e_course/widgets/my_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileView extends StatefulWidget {
@@ -90,7 +92,9 @@ class _ProfileViewState extends State<ProfileView> {
                 ),
               ),
               const SizedBox(height: 25,),
-              MyButton(text: 'Sign Out', onPressed: (){}, color: Colors.grey.shade900, textColor: Colors.blueAccent),
+              MyButton(text: 'Sign Out', onPressed: (){
+                Get.offAll(LoginView(),transition: Transition.topLevel);
+              }, color: Colors.grey.shade900, textColor: Colors.blueAccent),
             ],
           ),
         ),
